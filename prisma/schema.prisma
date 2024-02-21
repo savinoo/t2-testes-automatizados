@@ -1,0 +1,111 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL")
+}
+
+model User {
+  id       String @id @default(uuid())
+  name     String
+  email    String @unique
+  password String
+}
+
+model Disciplina {
+  id        String @id @default(uuid())
+  name      String
+  teacher   String @unique
+  email     String
+  status    Boolean
+}
+
+model Aluno {
+  id          String   @id @default(uuid())
+  customer_id String
+  amount      Int
+  date        String
+  status      Status
+  customer    Customer @relation(fields: [customer_id], references: [id])
+}
+
+model Disciplina {
+  id          String    @id @default(uuid())
+  aluno_id    String
+  t_turma     Int
+}
+
+enum Status {
+  pending
+  paid
+}
+
+model Revenue {
+  id      String   @id @default(uuid())
+  month   DateTime
+  revenue Int
+}
+
+model LatestInvoice {
+  id        String @id @default(uuid())
+  name      String
+  image_url String
+  email     String @unique
+  amount    String
+}
+
+model LatestInvoiceRaw {
+  id        String @id @default(uuid())
+  name      String
+  image_url String
+  email     String @unique
+  amount    Int
+}
+
+model InvoicesTable {
+  id          String   @id @default(uuid())
+  customer_id String
+  name        String
+  email       String @unique
+  image_url   String
+  date        String
+  amount      Int
+  status      Status
+}
+
+model CustomersTableType {
+  id             String @id @default(uuid())
+  name           String
+  email          String @unique
+  image_url      String
+  total_invoices Int
+  total_pending  Int
+  total_paid     Int
+}
+
+model FormattedCustomersTable {
+  id             String @id @default(uuid())
+  name           String
+  email          String @unique
+  image_url      String
+  total_invoices Int
+  total_pending  String
+  total_paid     String
+}
+
+model CustomerField {
+  id   String @id @default(uuid())
+  name String
+}
+
+model InvoiceForm {
+  id          String   @id @default(uuid())
+  customer_id String
+  amount      Int
+  status      Status
+}
