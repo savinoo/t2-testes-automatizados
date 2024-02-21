@@ -1,4 +1,4 @@
-import {Table} from '@/app/ui/dashboard/disciplinas-matriculadas/table';
+import {Table} from '@/app/ui/disciplinas-matriculadas/table';
 import { lusitana } from '@/app/ui/fonts';
 import { Suspense } from 'react';
 

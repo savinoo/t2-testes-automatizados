@@ -1,9 +1,8 @@
-import Image from 'next/image';
+
 import { Button } from '../button';
 
 
 export async function FormTable() {
-  //const invoices = await fetchFilteredInvoices(query, currentPage);
   const disciplinas = [{
     id: 1,
     name: 'Matemática',
