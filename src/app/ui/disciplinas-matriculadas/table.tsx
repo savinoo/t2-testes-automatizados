@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import { Button } from '@/app/ui/button';
 import { Disciplina } from '@/app/lib/definitions';
 
 

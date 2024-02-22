@@ -1,7 +1,6 @@
 
 import {FormTable} from '@/app/ui/requisicao-de-matricula/form-table';
 import { lusitana } from '@/app/ui/fonts';
-import { Suspense } from 'react';
 import { disciplinas } from '@/app/lib/placeholder-data';
 
  

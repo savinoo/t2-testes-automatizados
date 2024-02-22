@@ -1,7 +1,6 @@
 import { disciplinas } from '@/app/lib/placeholder-data';
 import {Table} from '@/app/ui/disciplinas-matriculadas/table';
 import { lusitana } from '@/app/ui/fonts';
-import { Suspense } from 'react';
 export {disciplinas} from '@/app/lib/placeholder-data';
  
 

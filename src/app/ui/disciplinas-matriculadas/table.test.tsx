@@ -1,5 +1,5 @@
 import { test, expect, vi } from 'vitest';
-import { render, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { Table } from './table';
 
 

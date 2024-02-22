@@ -8,7 +8,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useFormStatus } from 'react-dom';
 
 
 export default function LoginForm() {
@@ -68,6 +68,7 @@ export default function LoginForm() {
 
 function LoginButton() {
   const { pending } = useFormStatus();
+  console.log(pending)
   return (
     <Button className="mt-4 w-full" aria-disabled={pending}>
       Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
