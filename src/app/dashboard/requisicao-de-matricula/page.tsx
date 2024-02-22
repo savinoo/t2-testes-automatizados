@@ -2,6 +2,8 @@
 import {FormTable} from '@/app/ui/requisicao-de-matricula/form-table';
 import { lusitana } from '@/app/ui/fonts';
 import { Suspense } from 'react';
+import { disciplinas } from '@/app/lib/placeholder-data';
+
  
 export default async function Page() {
 
@@ -14,7 +16,7 @@ export default async function Page() {
         
       </div>
      
-        <FormTable />
+        <FormTable disciplinas={disciplinas}/>
      
       <div className="mt-5 flex w-full justify-center">
         

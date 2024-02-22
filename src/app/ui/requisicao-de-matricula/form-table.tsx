@@ -1,23 +1,8 @@
 
 import { Button } from '../button';
+import { Disciplina } from '@/app/lib/definitions';
 
-
-export async function FormTable() {
-  const disciplinas = [{
-    id: 1,
-    name: 'Matemática',
-    teacher: 'João da Silva',
-    email: 'gggg@gmail.com',
-    periodo: 4,
-  },
-  {
-    id: 2,
-    name: 'Física',
-    teacher: 'Maria da Silva',
-    email: 'gsfgfed@gmail.com',
-    periodo: 4,
-  }
-  ]
+export function FormTable({disciplinas}: {disciplinas: Disciplina[]}) {
 
   return (
     <div className="mt-6 flow-root">

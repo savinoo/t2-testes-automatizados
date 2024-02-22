@@ -1,8 +1,10 @@
+import { disciplinas } from '@/app/lib/placeholder-data';
 import {Table} from '@/app/ui/disciplinas-matriculadas/table';
 import { lusitana } from '@/app/ui/fonts';
 import { Suspense } from 'react';
-
+export {disciplinas} from '@/app/lib/placeholder-data';
  
+
 export default async function Page() {
 
   return (
@@ -14,7 +16,7 @@ export default async function Page() {
         
       </div>
      
-        <Table />
+        <Table disciplinas={disciplinas} status="Aprovado"/>
      
       <div className="mt-5 flex w-full justify-center">
         

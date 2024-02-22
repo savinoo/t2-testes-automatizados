@@ -1,24 +1,9 @@
 import Image from 'next/image';
 import { Button } from '@/app/ui/button';
+import { Disciplina } from '@/app/lib/definitions';
 
 
-export async function Table() {
-  //const invoices = await fetchFilteredInvoices(query, currentPage);
-  const disciplinas = [{
-    id: 1,
-    name: 'Matemática',
-    teacher: 'João da Silva',
-    email: 'gggg@gmail.com',
-    periodo: 4,
-  },
-  {
-    id: 2,
-    name: 'Física',
-    teacher: 'Maria da Silva',
-    email: 'gsfgfed@gmail.com',
-    periodo: 4,
-  }
-  ]
+export function Table({disciplinas, status}: {disciplinas: Disciplina[], status: string}) {
 
   return (
     <div className="mt-6 flow-root">
@@ -69,7 +54,7 @@ export async function Table() {
                     </td>
                     <td className="whitespace-nowrap py-3 pl-6 pr-3">
                       <div className="flex justify-end align-center gap-3">
-                        <p>Aprovado / pendente</p>
+                        <p>{status}</p>
 
                       </div>
                     </td>
