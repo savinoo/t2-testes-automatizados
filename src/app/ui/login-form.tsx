@@ -34,7 +34,7 @@ const LoginForm = () => {
     if (matricula && pass) {
       const loggedUser = await login(matricula, pass);
       console.log(loggedUser, 'loggedUser');
-      if (loggedUser?.token) {
+      if (loggedUser.token) {
         window.location.pathname = '/dashboard';
         //router.push('/dashboard');
       }
